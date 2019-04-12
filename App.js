@@ -8,7 +8,7 @@ const First = ({ router }) => (
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF', }}>
-      <Text onPress={() => router.push.Second({ name: 'John' })}>LECTURE</Text>
+      <Text onPress={() => router.push.Second({ name: 'John' })}>PLAY</Text>
     </View>
 );
 
@@ -30,10 +30,7 @@ const Second = ({ router, name }) => (
             initOptions={[
                 "--rtsp-tcp",
                 "--network-caching=" + 150,
-                "--rtsp-caching=" + 150,
                 "--no-stats",
-                "--tcp-caching=" + 150,
-                "--realrtsp-caching=" + 150,
                 "--verbose=4",
 
             ]}
@@ -44,7 +41,7 @@ const Second = ({ router, name }) => (
                 ':live-caching': 30,
             }}
         />
-      <Text onPress={() => router.pop()}>RETOUR</Text>
+      <Text onPress={() => router.pop()}>GO BACK</Text>
     </View>
 );
 
